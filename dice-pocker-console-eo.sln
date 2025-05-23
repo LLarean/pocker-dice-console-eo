@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dice-pocker-console-eo", "dice-pocker-console-eo\dice-pocker-console-eo.csproj", "{6027E1EE-7AA2-4EC5-9A68-42132931384F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{CF473806-72BC-4079-952C-7438FF4C4625}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6027E1EE-7AA2-4EC5-9A68-42132931384F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6027E1EE-7AA2-4EC5-9A68-42132931384F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6027E1EE-7AA2-4EC5-9A68-42132931384F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6027E1EE-7AA2-4EC5-9A68-42132931384F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF473806-72BC-4079-952C-7438FF4C4625}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF473806-72BC-4079-952C-7438FF4C4625}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF473806-72BC-4079-952C-7438FF4C4625}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF473806-72BC-4079-952C-7438FF4C4625}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
