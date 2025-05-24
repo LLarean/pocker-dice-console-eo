@@ -1,24 +1,19 @@
-﻿public class Dice
-{
-    private readonly int _maximumValue;
-    private readonly int _currentValue;
+﻿namespace PockerDice;
 
-    public Dice(int maximumValue)
+public class Dice(Random random, int maximumValue)
+{
+    private const int MinimumValue = 1;
+    private readonly int _currentValue = MinimumValue;
+
+    private Dice(Random random, int maximumValue, int currentValue) : this(random, maximumValue)
     {
-        _maximumValue = maximumValue;
-    }
-    
-    public Dice(int maximumValue, int currentValue)
-    {
-        _maximumValue = maximumValue;
         _currentValue = currentValue;
     }
 
     public Dice Roll()
     {
-        Random random = new Random();
-        var randomValue = random.Next(_maximumValue + 1);
-        return new Dice(_maximumValue, randomValue);
+        var randomValue = random.Next(MinimumValue, maximumValue + 1);
+        return new Dice(random, maximumValue, randomValue);
     }
 
     public int Value()
