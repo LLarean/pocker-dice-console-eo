@@ -8,7 +8,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/LLarean/dice-pocker-console-eo/blob/master/LICENSE.txt)
 [![Test Coverage](https://img.shields.io/codecov/c/)](https://codecov.io/github/)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/dc71110fe0ac43b8a535eec8b8fec389)](https://www.codacy.com/gh/LLarean/dice-pocker-console-eo/dashboard)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a7dd2af28207403abc5ec77ebba303b1)](https://app.codacy.com/gh/LLarean/dice-pocker-console-eo/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 This repository is a practice of writing programs in the spirit of [Elegant Objects](https://www.elegantobjects.org/)  
 
