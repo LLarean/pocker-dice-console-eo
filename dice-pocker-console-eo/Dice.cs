@@ -1,6 +1,6 @@
 ﻿namespace PockerDice;
 
-public class Dice(Random random, int maximumValue)
+public record Dice(Random Random, int MaximumValue)
 {
     private const int MinimumValue = 1;
     private readonly int _currentValue = MinimumValue;
@@ -12,8 +12,8 @@ public class Dice(Random random, int maximumValue)
 
     public Dice Roll()
     {
-        var randomValue = random.Next(MinimumValue, maximumValue + 1);
-        return new Dice(random, maximumValue, randomValue);
+        var randomValue = Random.Next(MinimumValue, MaximumValue + 1);
+        return new Dice(Random, MaximumValue, randomValue);
     }
 
     public int Value()
