@@ -29,14 +29,14 @@ foreach (var diceValue in dicesValue)
     Console.WriteLine(diceValue);
 }
 
-Console.WriteLine("\nEnter the number of the dice you want to roll (separated by a space)");
+Console.WriteLine("\nEnter the index of the dice you want to roll (separated by a space)");
 var input = Console.ReadLine();
 
-int[] numbers = input.Split(' ')
+int[] indexes = input.Split(' ')
     .Select(int.Parse)
     .ToArray();
 
-player = player.Roll(numbers);
+player = player.RerollDices(indexes);
 
 dicesValue = player.GetDicesValue();
 

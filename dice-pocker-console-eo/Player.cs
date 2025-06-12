@@ -11,21 +11,14 @@ public record Player : IPlayer
 
     public Player RollAll()
     {
-        for (int i = 0; i < _dices.Length; i++)
-        {
-            _dices[i] = _dices[i].Roll();
-        }
-
+        int[] indexes = Enumerable.Range(0, _dices.Length).ToArray();
+        Roll(indexes);
         return new Player(_dices);
     }
 
-    public Player Roll(int[] numbers)
+    public Player RerollDices(int[] indexes)
     {
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            _dices[numbers[i]] = _dices[numbers[i]].Roll();
-        }
-
+        Roll(indexes);
         return new Player(_dices);
     }
 
@@ -39,5 +32,13 @@ public record Player : IPlayer
         }
         
         return values.ToArray();
+    }
+
+    private void Roll(int[] indexes)
+    {
+        for (int i = 0; i < indexes.Length; i++)
+        {
+            _dices[indexes[i]] = _dices[indexes[i]].Roll();
+        }
     }
 }
