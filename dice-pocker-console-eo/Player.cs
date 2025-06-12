@@ -1,6 +1,6 @@
 ﻿namespace PockerDice;
 
-public record Player : IPlayer
+public record Player
 {
     private readonly Dice[] _dices;
 
@@ -16,7 +16,7 @@ public record Player : IPlayer
         return new Player(_dices);
     }
 
-    public Player RerollDices(int[] indexes)
+    public Player RollDices(int[] indexes)
     {
         Roll(indexes);
         return new Player(_dices);

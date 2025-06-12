@@ -36,7 +36,7 @@ int[] indexes = input.Split(' ')
     .Select(int.Parse)
     .ToArray();
 
-player = player.RerollDices(indexes);
+player = player.RollDices(indexes);
 
 dicesValue = player.GetDicesValue();
 
