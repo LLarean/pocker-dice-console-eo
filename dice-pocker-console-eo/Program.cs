@@ -4,7 +4,7 @@ using PockerDice;
 
 var random = new Random();
 
-var dices1 = new List<Dice>()
+var dices = new List<Dice>()
 {
     new(random, 6),
     new(random, 6),
@@ -13,47 +13,38 @@ var dices1 = new List<Dice>()
     new(random, 6)
 };
 
-var player1 = new Player(dices1.ToArray());
+var player = new Player(dices.ToArray());
 
-// var dices2 = new List<Dice>()
-// {
-//     new(random, 6),
-//     new(random, 6),
-//     new(random, 6),
-//     new(random, 6),
-//     new(random, 6)
-// };
-//
-// var player2 = new Player(new CurrentPlayer(), dices2.ToArray());
+Console.WriteLine("Press any key to roll the dice");
+Console.ReadKey();
 
+player = player.RollAll();
 
-Console.WriteLine("Roll the dice - 1\nExit - 2");
-var value = Console.ReadLine();
+var dicesValue = player.GetDicesValue();
 
-var command = int.Parse(value);
+Console.WriteLine("The values of your dice:");
 
-if (command == 1)
+foreach (var diceValue in dicesValue)
 {
-    player1 = player1.RollAll();
-    // player2 = player2.Turn();
+    Console.WriteLine(diceValue);
 }
 
-var dicesValue1 = player1.GetDicesValue();
-// var dicesValue2 = player2.GetDicesValue();
+Console.WriteLine("\nEnter the number of the dice you want to roll (separated by a space)");
+var input = Console.ReadLine();
 
-Console.Write("Your dices:");
+int[] numbers = input.Split(' ')
+    .Select(int.Parse)
+    .ToArray();
 
-for (int i = 0; i < dicesValue1.Length; i++)
+player = player.Roll(numbers);
+
+dicesValue = player.GetDicesValue();
+
+Console.WriteLine("The values of your dice:");
+
+foreach (var diceValue in dicesValue)
 {
-    Console.Write(" " + dicesValue1[i]);
+    Console.WriteLine(diceValue);
 }
 
-// Console.Write("\nEnemy dices:");
-//
-// for (int i = 0; i < dicesValue2.Length; i++)
-// {
-//     Console.Write(" " + dicesValue2[i]);
-// }
-
-Console.WriteLine("\nPRESS ANY KEY");
 Console.ReadKey();

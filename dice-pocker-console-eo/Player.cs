@@ -19,6 +19,16 @@ public record Player : IPlayer
         return new Player(_dices);
     }
 
+    public Player Roll(int[] numbers)
+    {
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            _dices[numbers[i]] = _dices[numbers[i]].Roll();
+        }
+
+        return new Player(_dices);
+    }
+
     public int[] GetDicesValue()
     {
         List<int> values = new();
