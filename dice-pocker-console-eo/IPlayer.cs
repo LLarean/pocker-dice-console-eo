@@ -2,5 +2,5 @@
 
 public interface IPlayer
 {
-    public Player Turn();
+    public Player RollAll();
 }

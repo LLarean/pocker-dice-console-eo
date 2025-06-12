@@ -13,7 +13,7 @@ var dices1 = new List<Dice>()
     new(random, 6)
 };
 
-var player1 = new Player(new CurrentPlayer(), dices1.ToArray());
+var player1 = new Player(dices1.ToArray());
 
 // var dices2 = new List<Dice>()
 // {
@@ -34,7 +34,7 @@ var command = int.Parse(value);
 
 if (command == 1)
 {
-    player1 = player1.Turn();
+    player1 = player1.RollAll();
     // player2 = player2.Turn();
 }
 

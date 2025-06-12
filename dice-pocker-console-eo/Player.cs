@@ -2,24 +2,21 @@
 
 public record Player : IPlayer
 {
-    private readonly IPlayer _player;
     private readonly Dice[] _dices;
 
-    public Player(IPlayer player, Dice[] dices)
+    public Player(Dice[] dices)
     {
-        _player = player;
         _dices = dices;
     }
 
-    public Player Turn()
+    public Player RollAll()
     {
-        // _player.Turn();
-        foreach (var dice in _dices)
+        for (int i = 0; i < _dices.Length; i++)
         {
-            dice.Roll();
+            _dices[i] = _dices[i].Roll();
         }
 
-        return new Player(_player, _dices);
+        return new Player(_dices);
     }
 
     public int[] GetDicesValue()

@@ -15,8 +15,8 @@ public class PlayerTests
             new(random, 6)
         };
         
-        var player1 = new Player(new CurrentPlayer(), dices.ToArray());
-        var player2 = player1.Turn();
+        var player1 = new Player(dices.ToArray());
+        var player2 = player1.RollAll();
 
         // Assert.That(player1.GetDicesValue(), Is.Not.EqualTo(player2.GetDicesValue()));
         Assert.That(player1, Is.Not.SameAs(player2));

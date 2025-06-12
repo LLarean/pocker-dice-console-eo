@@ -2,7 +2,7 @@
 
 public record EnemyPlayer : IPlayer
 {
-    public Player Turn()
+    public Player RollAll()
     {
         throw new NotImplementedException();
     }
