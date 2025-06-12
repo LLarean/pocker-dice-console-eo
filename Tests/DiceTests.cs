@@ -1,7 +1,8 @@
-using PockerDice;
+﻿using PockerDice;
 
 namespace Tests;
 
+[TestFixture]
 public class DiceTests
 {
     [Test]

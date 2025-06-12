@@ -13,12 +13,12 @@ public record Player : IPlayer
 
     public Player Turn()
     {
-        _player.Turn();
+        // _player.Turn();
         
-        // foreach (var dice in _dices)
-        // {
-        //     dice.Roll();
-        // }
+        foreach (var dice in _dices)
+        {
+            dice.Roll();
+        }
 
         return new Player(_player, _dices);
     }
