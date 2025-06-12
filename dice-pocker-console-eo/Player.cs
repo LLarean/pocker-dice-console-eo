@@ -14,7 +14,6 @@ public record Player : IPlayer
     public Player Turn()
     {
         // _player.Turn();
-        
         foreach (var dice in _dices)
         {
             dice.Roll();

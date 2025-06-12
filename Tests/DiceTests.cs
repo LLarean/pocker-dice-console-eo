@@ -29,11 +29,9 @@ public class DiceTests
     }
 
     [Test]
-    public void Roll_AnyNumberAttempts_NeverExceedsMaximumValue()
+    [TestCase(1, 6)]
+    public void Roll_AnyNumberAttempts_NeverExceedsMaximumValue(int minimumValue, int maximumValue)
     {
-        var minimumValue = 1;
-        var maximumValue = 6;
-
         var random = new Random();
         var dice = new Dice(random, maximumValue);
 
@@ -42,6 +40,25 @@ public class DiceTests
             var newDice = dice.Roll();
             Assert.That(newDice.Value(), Is.InRange(minimumValue, maximumValue));
         }
+    }
+    
+    [Test]
+    [TestCase(1, 6, 100)]
+    public void Roll_AnyNumberAttempts_SumAllAttemptsNotEqualSumMinimumValues(int minimumValue, int maximumValue, int numberOfAttempts)
+    {
+        var random = new Random();
+        var dice = new Dice(random, maximumValue);
+
+        var sumMinimumValues = minimumValue * numberOfAttempts;
+        var sumRandomValues = 0;
+
+        for (int i = 0; i < numberOfAttempts; i++)
+        {
+            var newDice = dice.Roll();
+            sumRandomValues += newDice.Value();
+        }
+        
+        Assert.IsTrue(sumRandomValues != sumMinimumValues);
     }
 
     [Test]

@@ -12,7 +12,9 @@ public record Dice(Random Random, int MaximumValue)
 
     public Dice Roll()
     {
+        Console.WriteLine("MaximumValue = " + MaximumValue);
         var randomValue = Random.Next(MinimumValue, MaximumValue + 1);
+        Console.WriteLine($"Rolled a {_currentValue}");
         return new Dice(Random, MaximumValue, randomValue);
     }
 
