@@ -36,9 +36,9 @@ public record Player
 
     private void Roll(int[] indexes)
     {
-        for (int i = 0; i < indexes.Length; i++)
+        foreach (var index in indexes)
         {
-            _dices[indexes[i]] = _dices[indexes[i]].Roll();
+            _dices[index] = _dices[index].Roll();
         }
     }
 }
