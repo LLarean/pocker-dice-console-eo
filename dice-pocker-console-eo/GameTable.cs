@@ -4,7 +4,8 @@ public class GameTable(Player[] players)
 {
     public void Start()
     {
-        Console.WriteLine("Press any key to roll the dice");
+        new Menu(true).Options();
+        
         Console.ReadKey();
 
         players[0] = players[0].RollAll();

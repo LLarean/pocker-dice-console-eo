@@ -11,5 +11,7 @@
     &lt;TestId&gt;NUnit3x::CF473806-72BC-4079-952C-7438FF4C4625::net8.0::Tests.DiveTests2&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::CF473806-72BC-4079-952C-7438FF4C4625::net8.0::Tests.PlayerTests.Player_IsImmutable&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::CF473806-72BC-4079-952C-7438FF4C4625::net8.0::Tests.PlayerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::CF473806-72BC-4079-952C-7438FF4C4625::net8.0::Tests.MenuTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::CF473806-72BC-4079-952C-7438FF4C4625::net8.0::Tests.DeckTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
