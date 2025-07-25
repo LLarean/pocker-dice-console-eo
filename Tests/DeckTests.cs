@@ -3,7 +3,7 @@
 namespace Tests;
 
 [TestFixture]
-public class DicesTests
+public class DeckTests
 {
     [Test]
     [TestCase(4)] // D4
@@ -13,7 +13,7 @@ public class DicesTests
     {
         var random = new Random();
         
-        var dices = new Dices(random, maximumValue).Content();
+        var dices = new Deck(random, maximumValue).Dices();
 
         Assert.NotNull(dices);
         Assert.That(dices.Length, Is.EqualTo(5));

@@ -1,8 +1,8 @@
 ﻿namespace PockerDice;
 
-public class Dices(Random random, int maximumValue)
+public class Deck(Random random, int maximumValue)
 {
-    public Dice[] Content()
+    public Dice[] Dices()
     {
         var dices = new Dice[]
         {

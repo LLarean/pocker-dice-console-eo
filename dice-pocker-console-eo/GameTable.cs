@@ -1,19 +1,15 @@
 ﻿namespace PockerDice;
 
-public class GameTable
+public class GameTable(Player[] players)
 {
     public void Start()
     {
-        var random = new Random();
-        var dices = new Dices(random, 6).Content();
-        var player = new Player(dices);
-
         Console.WriteLine("Press any key to roll the dice");
         Console.ReadKey();
 
-        player = player.RollAll();
+        players[0] = players[0].RollAll();
 
-        var dicesValue = player.GetDicesValue();
+        var dicesValue = players[0].GetDicesValue();
 
         Console.WriteLine("The values of your dice:");
 
@@ -29,9 +25,9 @@ public class GameTable
             .Select(int.Parse)
             .ToArray();
 
-        player = player.RollDices(indexes);
+        players[0] = players[0].RollDices(indexes);
 
-        dicesValue = player.GetDicesValue();
+        dicesValue = players[0].GetDicesValue();
 
         Console.WriteLine("The values of your dice:");
 
