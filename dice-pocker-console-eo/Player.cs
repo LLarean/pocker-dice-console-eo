@@ -22,7 +22,7 @@ public record Player
         return new Player(_dices);
     }
 
-    public int[] GetDicesValue()
+    public int[] DicesValue()
     {
         List<int> values = new();
         

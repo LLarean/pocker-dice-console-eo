@@ -25,7 +25,7 @@ public class PlayerTests
     [Test]
     public void RollAll_GeneratesDifferentValues()
     {
-        var values = _player.RollAll().GetDicesValue();
+        var values = _player.RollAll().DicesValue();
 
         Assert.That(values, Has.Some.Not.EqualTo(values[0]));
     }
@@ -34,7 +34,7 @@ public class PlayerTests
     public void RollDices_GeneratesDifferentValues()
     {
         var indexes = new[] { 0, 2, 4 };
-        var values = _player.RollDices(indexes).GetDicesValue();
+        var values = _player.RollDices(indexes).DicesValue();
 
         Assert.That(values, Has.Some.Not.EqualTo(values[0]));
     }
@@ -42,7 +42,7 @@ public class PlayerTests
     [Test]
     public void GetDicesValue_ReturnsCorrectValues()
     {
-        var values = _player.GetDicesValue();
+        var values = _player.DicesValue();
 
         Assert.That(values, Has.Length.EqualTo(_dices.Length));
         Assert.That(values, Has.All.InRange(1, 6));
