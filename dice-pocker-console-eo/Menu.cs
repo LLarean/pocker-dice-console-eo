@@ -10,6 +10,7 @@ public class Menu(bool isFirstStep)
         if (isFirstStep == false)
         {
             Console.WriteLine("2 - Select dice to roll");
+            Console.WriteLine("3 - Skip");
         }
         
         Console.WriteLine("0 - Exit");
@@ -28,9 +29,9 @@ public class Menu(bool isFirstStep)
                     throw new FormatException($"Invalid number format: '{input}'.");
                 }
 
-                if (number != 0 && number != 1 && number != 2)
+                if (number != 0 && number != 1 && number != 2 && number != 3)
                 {
-                    throw new ArgumentOutOfRangeException(nameof(number), $"Number must be 0, 1 or 2. Got: {number}");
+                    throw new ArgumentOutOfRangeException(nameof(number), $"Number must be 0, 1, 2 or 3. Got: {number}");
                 }
                 
                 return number;

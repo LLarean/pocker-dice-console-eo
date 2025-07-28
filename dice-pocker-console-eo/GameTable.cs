@@ -11,6 +11,11 @@ public class GameTable(Player[] players)
 
             var optionsNumber = menu.OptionsNumber();
 
+            if (optionsNumber == 0)
+            {
+                return;
+            }
+            
             players[0] = players[0].RollAll();
 
             var dicesValue = players[0].DicesValue();
