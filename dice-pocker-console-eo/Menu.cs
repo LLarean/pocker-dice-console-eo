@@ -4,43 +4,38 @@ public class Menu(bool isFirstStep)
 {
     public void Options()
     {
-        Console.WriteLine("Select menu option");
-        Console.WriteLine("1 - Roll all your dice");
-
-        if (isFirstStep == false)
-        {
-            Console.WriteLine("2 - Select dice to roll");
-            Console.WriteLine("3 - Skip");
-        }
-        
-        Console.WriteLine("0 - Exit");
+        Console.Write(isFirstStep == false
+            ? "Select option (1-RollAll, 3-Skip, 0-Exit): "
+            : "Select option (1-RollAll, 2-Skip, 3-Select, 0-Exit): ");
     }
 
-    public int OptionsNumber()
+    public MenuOption OptionsNumber()
     {
-        while (true)
+        try
         {
-            try
-            {
-                var input = Console.ReadLine();;
+            string input = Console.ReadLine();
 
-                if (int.TryParse(input, out int number) == false)
-                {
-                    throw new FormatException($"Invalid number format: '{input}'.");
-                }
-
-                if (number != 0 && number != 1 && number != 2 && number != 3)
-                {
-                    throw new ArgumentOutOfRangeException(nameof(number), $"Number must be 0, 1, 2 or 3. Got: {number}");
-                }
-                
-                return number;
-            }
-            catch (Exception ex)
+            if (!int.TryParse(input, out int choice))
             {
-                Console.WriteLine($"Error: {ex.Message}. Try again.");
+                throw new FormatException($"Invalid input: '{input}'. Please enter a number.");
             }
+
+            return choice switch
+            {
+                0 => MenuOption.RollAllDice,
+                1 => MenuOption.SelectDice,
+                2 => MenuOption.SkipTurn,
+                3 => MenuOption.ExitGame,
+                _ => throw new ArgumentOutOfRangeException(nameof(choice), 
+                    $"Invalid option: {choice}. Must be 0-3.")
+            };
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}. Please try again.");
+        }
+
+        return MenuOption.ExitGame;
     }
 
     public int[] NumbersDiceToRoll()
