@@ -6,6 +6,7 @@
 [![We recommend IntelliJ Rider](https://www.elegantobjects.org/intellij-idea.svg)](https://www.jetbrains.com/rider/)
 
 
+![Status](https://img.shields.io/badge/Development-Paused-orange)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/LLarean/dice-pocker-console-eo/blob/master/LICENSE.txt)
 [![Test Coverage](https://img.shields.io/codecov/c/)](https://codecov.io/github/)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/a7dd2af28207403abc5ec77ebba303b1)](https://app.codacy.com/gh/LLarean/pocker-dice-console-eo/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
