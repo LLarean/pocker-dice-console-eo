@@ -27,6 +27,8 @@ public class GameTable(Player[] players)
                 Console.WriteLine(diceValue);
             }
 
+            //TODO 
+            
             int[] indexes = menu.NumbersDiceToRoll();
 
             players[0] = players[0].RollDices(indexes);

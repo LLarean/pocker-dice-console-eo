@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using PockerDice;
+﻿using PockerDice;
 
 var random = new Random();
 var players = new Player[2];
