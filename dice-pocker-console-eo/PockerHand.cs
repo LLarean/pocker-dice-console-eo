@@ -18,9 +18,18 @@ public class PockerHand
             diceValues.Add(dice.Value());
         }
 
-        if (FiveKindStatus(diceValues)) return HandType.FiveKind;
+        var diceDictionary = new DiceDictionary(diceValues);
         
-        if (FourKindStatus(diceValues)) return HandType.FourKind;
+        if (diceDictionary.HaveFive()) return HandType.FiveKind;
+        if (diceDictionary.HaveFour()) return HandType.FourKind;
+
+        if (diceDictionary.HaveThreeAndTwo()) return HandType.FullHouse;
+        
+        if (diceDictionary.HaveStraight()) return HandType.Straight;
+        
+        if (diceDictionary.HaveTwoAndTwo()) return HandType.TwoPair;
+        
+        if (diceDictionary.HaveTwo()) return HandType.OnePair;
         
         return HandType.Bust;
     }
@@ -29,20 +38,5 @@ public class PockerHand
     {
         var value = diceValues.FirstOrDefault();
         return diceValues.All(t => value == t);
-    }
-    
-    private bool FourKindStatus(List<int> diceValues)
-    {
-        var value = diceValues.FirstOrDefault();
-        
-        for (int i = 0; i < diceValues.Count; i++)
-        {
-            if (value != diceValues[i])
-            {
-                return false;
-            }
-        }
-
-        return true;
     }
 }
