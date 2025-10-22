@@ -27,8 +27,6 @@ public class GameTable(Player[] players)
                 Console.WriteLine(diceValue);
             }
 
-            //TODO 
-            
             int[] indexes = menu.NumbersDiceToRoll();
 
             players[0] = players[0].RollDices(indexes);
@@ -41,6 +39,9 @@ public class GameTable(Player[] players)
             {
                 Console.WriteLine(diceValue);
             }
+            
+            var pockerHand = new PockerHand(dicesValue);
+            Console.WriteLine("Pocker Hand: " + pockerHand);
 
             Console.ReadKey();
         }

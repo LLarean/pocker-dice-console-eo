@@ -2,22 +2,17 @@
 
 public class PockerHand
 {
-    private Dice[] _dices;
+    private int[] _diceValues;
 
-    public PockerHand(Dice[] dices)
+    public PockerHand(int[] diceValues)
     {
-        _dices = dices;
+        _diceValues = diceValues;
     }
     
     public HandType Type()
     {
         List<int> diceValues = new();
         
-        foreach (var dice in _dices)
-        {
-            diceValues.Add(dice.Value());
-        }
-
         var diceDictionary = new DiceDictionary(diceValues);
         
         if (diceDictionary.HaveFive()) return HandType.FiveKind;
@@ -32,11 +27,5 @@ public class PockerHand
         if (diceDictionary.HaveTwo()) return HandType.OnePair;
         
         return HandType.Bust;
-    }
-
-    private bool FiveKindStatus(List<int> diceValues)
-    {
-        var value = diceValues.FirstOrDefault();
-        return diceValues.All(t => value == t);
     }
 }
