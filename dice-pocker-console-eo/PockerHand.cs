@@ -11,9 +11,7 @@ public class PockerHand
     
     public HandType Type()
     {
-        List<int> diceValues = new();
-        
-        var diceDictionary = new DiceDictionary(diceValues);
+        var diceDictionary = new DiceDictionary(_diceValues.ToList());
         
         if (diceDictionary.HaveFive()) return HandType.FiveKind;
         if (diceDictionary.HaveFour()) return HandType.FourKind;

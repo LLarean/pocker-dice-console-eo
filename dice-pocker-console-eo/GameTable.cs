@@ -41,7 +41,7 @@ public class GameTable(Player[] players)
             }
             
             var pockerHand = new PockerHand(dicesValue);
-            Console.WriteLine("Pocker Hand: " + pockerHand);
+            Console.WriteLine("Pocker Hand: " + pockerHand.Type());
 
             Console.ReadKey();
         }

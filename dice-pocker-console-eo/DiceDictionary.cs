@@ -9,6 +9,14 @@ public record DiceDictionary
         _diceValues = diceValues;
     }
 
+    public int DiceWithOneCount()
+    {
+        var diceDictionary = Content();
+
+        return diceDictionary[0];
+        // Content
+    }
+
     public bool HaveFive()
     {
         var diceDictionary = Content();
