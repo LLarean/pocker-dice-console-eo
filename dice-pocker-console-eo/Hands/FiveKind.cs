@@ -23,6 +23,11 @@ public record FiveKind
     /// <returns>True if all dice values are identical; otherwise, false.</returns>
     public bool IsValid()
     {
+        if (_diceValues == null || _diceValues.Length != 5)
+        {
+            throw new ArgumentException("Invalid number of dice values.");       
+        }
+        
         var tempValue = int.MinValue;
         
         foreach (var diceValue in _diceValues)
