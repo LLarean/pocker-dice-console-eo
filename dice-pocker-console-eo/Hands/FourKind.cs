@@ -5,7 +5,7 @@
 /// 3 + 3 + 3 + 3 + 1
 /// <seealso cref="HandType.FourKind"/>
 /// </summary>
-public class FourKind
+public record FourKind
 {
     private readonly int[] _diceValues;
 

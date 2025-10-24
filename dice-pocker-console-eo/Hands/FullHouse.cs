@@ -6,7 +6,7 @@
 /// 6 + 6 + 6 + 2 + 2
 /// <seealso cref="HandType.FullHouse"/>
 /// </summary>
-public class FullHouse
+public record FullHouse
 {
     private readonly int[] _diceValues;
 
