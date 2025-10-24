@@ -1,4 +1,6 @@
-﻿namespace PockerDice;
+﻿using PockerDice.Hands;
+
+namespace PockerDice;
 
 public class PockerHand
 {

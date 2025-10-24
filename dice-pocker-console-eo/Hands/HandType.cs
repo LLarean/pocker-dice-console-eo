@@ -1,4 +1,4 @@
-﻿namespace PockerDice;
+﻿namespace PockerDice.Hands;
 
 /// <summary>
 /// <seealso cref="en.wikipedia.org/wiki/Poker_dice#Probabilities"/>

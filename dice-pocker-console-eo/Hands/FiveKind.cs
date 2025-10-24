@@ -20,7 +20,9 @@ public record FiveKind
     /// <summary>
     /// Determines whether all dice values in the set are of the same value, signifying a successful Five Kind hand
     /// </summary>
-    /// <returns>True if all dice values are identical; otherwise, false</returns>
+    /// <returns>
+    /// True if all dice values are identical; otherwise, false
+    /// </returns>
     public bool IsValid()
     {
         var tempValue = int.MinValue;
