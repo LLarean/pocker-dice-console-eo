@@ -10,7 +10,7 @@ public record FiveKind
     private readonly int[] _diceValues;
 
     /// <summary>
-    /// Represents a Poker Dice hand where all five dice have the same value.
+    /// Accepts a collection of dice values
     /// </summary>
     public FiveKind(int[] diceValues)
     {
@@ -18,16 +18,11 @@ public record FiveKind
     }
 
     /// <summary>
-    /// Determines whether all dice values in the set are of the same value, signifying a successful Five Kind hand.
+    /// Determines whether all dice values in the set are of the same value, signifying a successful Five Kind hand
     /// </summary>
-    /// <returns>True if all dice values are identical; otherwise, false.</returns>
+    /// <returns>True if all dice values are identical; otherwise, false</returns>
     public bool IsValid()
     {
-        if (_diceValues == null || _diceValues.Length != 5)
-        {
-            throw new ArgumentException("Invalid number of dice values.");       
-        }
-        
         var tempValue = int.MinValue;
         
         foreach (var diceValue in _diceValues)
