@@ -2,9 +2,11 @@
 
 /// <summary>
 /// Represents a hand type in Poker Dice where all five dice show the same value, categorized as a Five Kind
-/// 4 + 4 + 4 + 4 + 4
 /// <seealso cref="HandType.FiveKind"/>
 /// </summary>
+/// <remarks>
+/// 4 + 4 + 4 + 4 + 4
+/// </remarks>
 public record FiveKind
 {
     private readonly int[] _diceValues;

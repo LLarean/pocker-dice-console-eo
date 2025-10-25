@@ -1,30 +1,30 @@
 ﻿namespace PockerDice.Hands;
 
 /// <summary>
-/// It is a type of combination in poker dice, in which only four dice show the same value, categorized as a Four Kind
-/// <seealso cref="HandType.FourKind"/>
+/// Represents a hand of dice that qualifies as a "Two Pair" in Poker Dice
+/// <seealso cref="HandType.TwoPair"/>
 /// </summary>
 /// <remarks>
-/// 3 + 3 + 3 + 3 + 1
+/// 5 + 5 + 2 + 2 + 1
 /// </remarks>
-public record FourKind
+public class TwoPair
 {
     private readonly int[] _diceValues;
 
     /// <summary>
-    /// Accepts a collection of dice values
+    /// Represents a hand in the Poker Dice game identified as "Two Pair"
+    /// This class determines whether a given hand of dice satisfies the "Two Pair" condition
     /// </summary>
-    public FourKind(int[] diceValues)
+    public TwoPair(int[] diceValues)
     {
         _diceValues = diceValues;
     }
 
     /// <summary>
-    /// Validates whether the dice values form a Four of a Kind hand in Poker Dice
+    /// Determines whether the current hand of dice satisfies the "Two Pair" condition in Poker Dice
     /// </summary>
     /// <returns>
-    /// True if the hand includes exactly four dice of the same value; otherwise, false
-    ///
+    /// True if the hand contains exactly two pairs of dice with the same value; otherwise, false
     /// </returns>
     public bool IsValid()
     {
@@ -44,14 +44,21 @@ public record FourKind
             }
         }
 
+        var firstPair = false;
+        var secondPair = false;
+        
         foreach (var dice in diceDictionary)
         {
-            if (dice.Value == 4)
+            if (dice.Value == 2 && firstPair == false)
             {
-                return true;
+                firstPair = true;
+            }
+            else if (dice.Value == 2)
+            {
+                secondPair = true;
             }
         }
         
-        return false;
+        return firstPair && secondPair;
     }
 }

@@ -1,16 +1,20 @@
 ﻿namespace PockerDice.Hands;
 
 /// <summary>
-/// Represents a poker dice hand of type "Straight".
+/// Represents a poker dice hand of type "Straight"
+/// <seealso cref="HandType.Straight"/>
 /// </summary>
+/// <remarks>
+/// 1 + 2 + 3 + 4 + 5
+/// </remarks>
 public record Straight
 {
     private readonly int[] _diceValues;
 
     /// <summary>
-    /// Represents a poker dice hand classified as a "Straight".
+    /// Represents a poker dice hand classified as a "Straight"
     /// A "Straight" hand is determined based on specific criteria
-    /// involving the sequential presence of dice values.
+    /// involving the sequential presence of dice values
     /// </summary>
     public Straight(int[] diceValues)
     {
@@ -18,11 +22,11 @@ public record Straight
     }
 
     /// <summary>
-    /// Determines whether the current poker dice hand qualifies as a "Straight".
-    /// A "Straight" requires sequential dice values according to predefined rules.
+    /// Determines whether the current poker dice hand qualifies as a "Straight"
+    /// A "Straight" requires sequential dice values according to predefined rules
     /// </summary>
     /// <returns>
-    /// True if the hand meets the criteria for a "Straight"; otherwise, false.
+    /// True if the hand meets the criteria for a "Straight"; otherwise, false
     /// </returns>
     public bool IsValid()
     {

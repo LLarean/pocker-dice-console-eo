@@ -3,9 +3,11 @@
 /// <summary>
 /// Represents a FullHouse hand in a dice-based poker game, characterized by a combination
 /// in which one value appears exactly three times and another value appears exactly two times
-/// 6 + 6 + 6 + 2 + 2
 /// <seealso cref="HandType.FullHouse"/>
 /// </summary>
+/// <remarks>
+/// 6 + 6 + 6 + 2 + 2
+/// </remarks>
 public record FullHouse
 {
     private readonly int[] _diceValues;
