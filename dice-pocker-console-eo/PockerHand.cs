@@ -13,7 +13,7 @@ public class PockerHand
     
     public HandType Type()
     {
-        var diceDictionary = new DiceDictionary(_diceValues.ToList());
+        var diceDictionary = new DiceDictionary(_diceValues);
         
         if (new FiveKind(_diceValues).IsValid()) return HandType.FiveKind;
         if (new FourKind(_diceValues).IsValid()) return HandType.FourKind;
