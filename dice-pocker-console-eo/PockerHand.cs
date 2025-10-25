@@ -15,16 +15,16 @@ public class PockerHand
     {
         var diceDictionary = new DiceDictionary(_diceValues.ToList());
         
-        if (diceDictionary.HaveFive()) return HandType.FiveKind;
-        if (diceDictionary.HaveFour()) return HandType.FourKind;
+        if (new FiveKind(_diceValues).IsValid()) return HandType.FiveKind;
+        if (new FourKind(_diceValues).IsValid()) return HandType.FourKind;
 
-        if (diceDictionary.HaveThreeAndTwo()) return HandType.FullHouse;
+        if (new FullHouse(_diceValues).IsValid()) return HandType.FullHouse;
         
-        if (diceDictionary.HaveStraight()) return HandType.Straight;
+        if (new Straight(_diceValues).IsValid()) return HandType.Straight;
         
-        if (diceDictionary.HaveTwoAndTwo()) return HandType.TwoPair;
+        if (new TwoPair(_diceValues).IsValid()) return HandType.TwoPair;
         
-        if (diceDictionary.HaveTwo()) return HandType.OnePair;
+        if (new OnePair(_diceValues).IsValid()) return HandType.OnePair;
         
         return HandType.Bust;
     }
