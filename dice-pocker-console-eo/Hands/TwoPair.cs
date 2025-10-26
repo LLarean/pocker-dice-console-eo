@@ -9,15 +9,15 @@
 /// </remarks>
 public class TwoPair
 {
-    private readonly int[] _diceValues;
-
+    private readonly DiceDictionary _diceDictionary;
+    
     /// <summary>
     /// Represents a hand in the Poker Dice game identified as "Two Pair"
     /// This class determines whether a given hand of dice satisfies the "Two Pair" condition
     /// </summary>
-    public TwoPair(int[] diceValues)
+    public TwoPair(DiceDictionary diceDictionary)
     {
-        _diceValues = diceValues;
+        _diceDictionary = diceDictionary;
     }
 
     /// <summary>
@@ -28,37 +28,21 @@ public class TwoPair
     /// </returns>
     public bool IsValid()
     {
-        var diceDictionary = new Dictionary<int, int>();
-
-        foreach (var diceValue in _diceValues)
-        {
-            if (diceDictionary.ContainsKey(diceValue))
-            {
-                var diceNumber = diceDictionary[diceValue];
-                diceNumber++;
-                diceDictionary[diceValue] = diceNumber;
-            }
-            else
-            {
-                diceDictionary.Add(diceValue, 1);
-            }
-        }
-
-        var firstPair = false;
-        var secondPair = false;
+        var haveFirstPair = false;
+        var haveSecondPair = false;
         
-        foreach (var dice in diceDictionary)
+        foreach (var dice in _diceDictionary.Content())
         {
-            if (dice.Value == 2 && firstPair == false)
+            if (dice.Value == 2 && haveFirstPair == false)
             {
-                firstPair = true;
+                haveFirstPair = true;
             }
             else if (dice.Value == 2)
             {
-                secondPair = true;
+                haveSecondPair = true;
             }
         }
         
-        return firstPair && secondPair;
+        return haveFirstPair && haveSecondPair;
     }
 }

@@ -1,4 +1,5 @@
-﻿using PockerDice.Hands;
+﻿using PockerDice;
+using PockerDice.Hands;
 
 namespace Tests;
 
@@ -11,7 +12,8 @@ public class TwoPairTests
     [TestCase(new[]{6, 4, 4, 2, 6})]
     public void IsValid_HandContainsTwoPairs_IsTrue(int[] diceValues)
     {
-        var twoPair = new TwoPair(diceValues);
+        var diceDictionary = new DiceDictionary(diceValues);
+        var twoPair = new TwoPair(diceDictionary);
         
         Assert.IsTrue(twoPair.IsValid());
     }
@@ -22,7 +24,8 @@ public class TwoPairTests
     [TestCase(new[]{2, 3, 4, 3, 6})]
     public void IsValid_HandNotContainsTwoPairs_IsFalse(int[] diceValues)
     {
-        var twoPair = new TwoPair(diceValues);
+        var diceDictionary = new DiceDictionary(diceValues);
+        var twoPair = new TwoPair(diceDictionary);
         
         Assert.IsFalse(twoPair.IsValid());
     }

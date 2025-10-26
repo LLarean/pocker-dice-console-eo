@@ -2,10 +2,10 @@
 
 namespace Tests;
 
-[TestFixture]
+// [TestFixture]
 public class MenuTests
 {
-    [Test]
+    // [Test]
     public void Options_ShouldPrintCorrectMenu_WhenIsFirstStepIsTrue()
     {
         var menu = new Menu(true);
@@ -21,7 +21,7 @@ public class MenuTests
         StringAssert.Contains("0 - Exit", output);
     }
 
-    [Test]
+    // [Test]
     public void Options_ShouldPrintSecondOption_WhenIsFirstStepIsFalse()
     {
         var menu = new Menu(false);

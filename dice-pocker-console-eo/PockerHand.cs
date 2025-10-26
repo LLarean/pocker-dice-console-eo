@@ -22,7 +22,7 @@ public class PockerHand
         
         if (new Straight(diceDictionary).IsValid()) return HandType.Straight;
         
-        if (new TwoPair(_diceValues).IsValid()) return HandType.TwoPair;
+        if (new TwoPair(diceDictionary).IsValid()) return HandType.TwoPair;
         
         if (new OnePair(_diceValues).IsValid()) return HandType.OnePair;
         
