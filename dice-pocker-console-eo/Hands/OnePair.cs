@@ -9,14 +9,14 @@
 /// </remarks>
 public class OnePair
 {
-    private readonly int[] _diceValues;
+    private readonly DiceDictionary _diceDictionary;
 
     /// <summary>
     /// Represents a poker hand that verifies if an array of dice values contains exactly one pair
     /// </summary>
-    public OnePair(int[] diceValues)
+    public OnePair(DiceDictionary diceDictionary)
     {
-        _diceValues = diceValues;
+        _diceDictionary = diceDictionary;
     }
 
     /// <summary>
@@ -28,37 +28,14 @@ public class OnePair
     /// </returns>
     public bool IsValid()
     {
-        var diceDictionary = new Dictionary<int, int>();
-
-        foreach (var diceValue in _diceValues)
+        foreach (var dice in _diceDictionary.Content())
         {
-            if (diceDictionary.ContainsKey(diceValue))
+            if (dice.Value == 2)
             {
-                var diceNumber = diceDictionary[diceValue];
-                diceNumber++;
-                diceDictionary[diceValue] = diceNumber;
-            }
-            else
-            {
-                diceDictionary.Add(diceValue, 1);
-            }
-        }
-
-        var firstPair = false;
-        var secondPair = false;
-        
-        foreach (var dice in diceDictionary)
-        {
-            if (dice.Value == 2 && firstPair == false)
-            {
-                firstPair = true;
-            }
-            else if (dice.Value == 2)
-            {
-                secondPair = true;
+                return true;
             }
         }
         
-        return firstPair && !secondPair;
+        return false;
     }
 }
