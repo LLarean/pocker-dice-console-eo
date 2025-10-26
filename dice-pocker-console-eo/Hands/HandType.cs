@@ -1,6 +1,7 @@
 ﻿namespace PockerDice.Hands;
 
 /// <summary>
+/// Defines the various hand types in a Poker Dice game
 /// <seealso cref="en.wikipedia.org/wiki/Poker_dice#Probabilities"/>
 /// </summary>
 public enum HandType

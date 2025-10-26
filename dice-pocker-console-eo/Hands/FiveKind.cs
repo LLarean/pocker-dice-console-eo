@@ -9,14 +9,14 @@
 /// </remarks>
 public record FiveKind
 {
-    private readonly int[] _diceValues;
+    private readonly DiceDictionary _diceDictionary;
 
     /// <summary>
-    /// Accepts a collection of dice values
+    /// Represents a specific hand in Poker Dice where all five dice display the same value, categorized as a Five Kind
     /// </summary>
-    public FiveKind(int[] diceValues)
+    public FiveKind(DiceDictionary diceDictionary)
     {
-        _diceValues = diceValues;
+        _diceDictionary = diceDictionary;
     }
 
     /// <summary>
@@ -27,20 +27,14 @@ public record FiveKind
     /// </returns>
     public bool IsValid()
     {
-        var tempValue = int.MinValue;
-        
-        foreach (var diceValue in _diceValues)
+        foreach (var dice in _diceDictionary.Content())
         {
-            if (tempValue == int.MinValue)
+            if (dice.Value == 5)
             {
-                tempValue = diceValue;
-            }
-            else if (tempValue != diceValue)
-            {
-                return false;
+                return true;
             }
         }
-
-        return true;
+        
+        return false;
     }
 }

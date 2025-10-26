@@ -11,7 +11,7 @@ public record DiceDictionary
     
     public Dictionary<int, int> Content()
     {
-        var result = new Dictionary<int, int>()
+        var dictionary = new Dictionary<int, int>()
         {
             {1, 0},
             {2, 0},
@@ -23,11 +23,11 @@ public record DiceDictionary
 
         foreach (var diceValue in _diceValues)
         {
-            var diceCount = result[diceValue];
+            var diceCount = dictionary[diceValue];
             diceCount++;
-            result[diceValue] = diceCount;
+            dictionary[diceValue] = diceCount;
         }
         
-        return result;
+        return dictionary;
     }
 }
