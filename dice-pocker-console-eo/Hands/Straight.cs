@@ -9,16 +9,16 @@
 /// </remarks>
 public record Straight
 {
-    private readonly int[] _diceValues;
+    private readonly DiceDictionary _diceDictionary;
 
     /// <summary>
     /// Represents a poker dice hand classified as a "Straight"
     /// A "Straight" hand is determined based on specific criteria
     /// involving the sequential presence of dice values
     /// </summary>
-    public Straight(int[] diceValues)
+    public  Straight(DiceDictionary diceDictionary)
     {
-        _diceValues = diceValues;
+        _diceDictionary = diceDictionary;
     }
 
     /// <summary>
@@ -30,30 +30,14 @@ public record Straight
     /// </returns>
     public bool IsValid()
     {
-        var diceDictionary = new Dictionary<int, int>()
-        {
-            {1, 0},
-            {2, 0},
-            {3, 0},
-            {4, 0},
-            {5, 0},
-            {6, 0},
-        };
-
-        foreach (var diceValue in _diceValues)
-        {
-            if (diceDictionary.ContainsKey(diceValue))
-            {
-                var diceNumber = diceDictionary[diceValue];
-                diceNumber++;
-                diceDictionary[diceValue] = diceNumber;
-            }
-        }
-
+        var diceDictionary = _diceDictionary.Content();
+        
         if (diceDictionary[2] == 0) return false;
         if (diceDictionary[3] == 0) return false;
         if (diceDictionary[4] == 0) return false;
         if (diceDictionary[5] == 0) return false;
+
+        if (diceDictionary[1] == 0 && diceDictionary[6] == 0) return false;
         
         return true;
     }
