@@ -30,14 +30,14 @@ public record Straight
     /// </returns>
     public bool IsValid()
     {
-        var diceDictionary = _diceDictionary.Content();
+        var dices = _diceDictionary.Content();
         
-        if (diceDictionary[2] == 0) return false;
-        if (diceDictionary[3] == 0) return false;
-        if (diceDictionary[4] == 0) return false;
-        if (diceDictionary[5] == 0) return false;
+        if (dices[2] == 0) return false;
+        if (dices[3] == 0) return false;
+        if (dices[4] == 0) return false;
+        if (dices[5] == 0) return false;
 
-        if (diceDictionary[1] == 0 && diceDictionary[6] == 0) return false;
+        if (dices[1] == 0 && dices[6] == 0) return false;
         
         return true;
     }
