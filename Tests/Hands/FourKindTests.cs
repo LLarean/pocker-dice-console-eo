@@ -1,4 +1,5 @@
-﻿using PockerDice.Hands;
+﻿using PockerDice;
+using PockerDice.Hands;
 
 namespace Tests;
 
@@ -11,7 +12,8 @@ public class FourKindTests
     [TestCase(new[]{6, 6, 3, 6, 6})]
     public void IsValid_FourNumbersAreSame_IsTrue(int[] diceValues)
     {
-        var fourKind = new FourKind(diceValues);
+        var diceDictionary = new DiceDictionary(diceValues);
+        var fourKind = new FourKind(diceDictionary);
         
         Assert.IsTrue(fourKind.IsValid());
     }
@@ -22,7 +24,8 @@ public class FourKindTests
     [TestCase(new[]{1, 1, 1, 5, 5})]
     public void IsValid_NoFourNumbersAreSame_IsFalse(int[] diceValues)
     {
-        var fourKind = new FourKind(diceValues);
+        var diceDictionary = new DiceDictionary(diceValues);
+        var fourKind = new FourKind(diceDictionary);
         
         Assert.IsFalse(fourKind.IsValid());
     }

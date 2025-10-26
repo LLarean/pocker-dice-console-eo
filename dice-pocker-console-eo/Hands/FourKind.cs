@@ -9,14 +9,14 @@
 /// </remarks>
 public record FourKind
 {
-    private readonly int[] _diceValues;
+    private readonly DiceDictionary _diceDictionary;
 
     /// <summary>
-    /// Accepts a collection of dice values
+    /// Represents the Four of a Kind poker dice hand, which consists of exactly four dice showing the same value
     /// </summary>
-    public FourKind(int[] diceValues)
+    public FourKind(DiceDictionary diceDictionary)
     {
-        _diceValues = diceValues;
+        _diceDictionary = diceDictionary;
     }
 
     /// <summary>
@@ -28,23 +28,7 @@ public record FourKind
     /// </returns>
     public bool IsValid()
     {
-        var diceDictionary = new Dictionary<int, int>();
-
-        foreach (var diceValue in _diceValues)
-        {
-            if (diceDictionary.ContainsKey(diceValue))
-            {
-                var diceNumber = diceDictionary[diceValue];
-                diceNumber++;
-                diceDictionary[diceValue] = diceNumber;
-            }
-            else
-            {
-                diceDictionary.Add(diceValue, 1);
-            }
-        }
-
-        foreach (var dice in diceDictionary)
+        foreach (var dice in _diceDictionary.Content())
         {
             if (dice.Value == 4)
             {
