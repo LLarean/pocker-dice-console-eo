@@ -1,4 +1,5 @@
-﻿using PockerDice.Hands;
+﻿using PockerDice;
+using PockerDice.Hands;
 
 namespace Tests;
 
@@ -11,7 +12,8 @@ public class FullHouseTests
     [TestCase(new[]{6, 6, 3, 3, 6})]
     public void IsValid_ValuesRepresentValidFullHouse_IsTrue(int[] diceValues)
     {
-        var fullHouse = new FullHouse(diceValues);
+        var diceDictionary = new DiceDictionary(diceValues);
+        var fullHouse = new FullHouse(diceDictionary);
         
         Assert.IsTrue(fullHouse.IsValid());
     }
@@ -22,7 +24,8 @@ public class FullHouseTests
     [TestCase(new[]{1, 3, 3, 5, 5})]
     public void IsValid_ValuesRepresentNotValidFullHouse_IsFalse(int[] diceValues)
     {
-        var fullHouse = new FullHouse(diceValues);
+        var diceDictionary = new DiceDictionary(diceValues);
+        var fullHouse = new FullHouse(diceDictionary);
         
         Assert.IsFalse(fullHouse.IsValid());
     }

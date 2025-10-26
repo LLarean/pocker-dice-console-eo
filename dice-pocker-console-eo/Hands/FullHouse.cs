@@ -10,14 +10,15 @@
 /// </remarks>
 public record FullHouse
 {
-    private readonly int[] _diceValues;
+    private readonly DiceDictionary _diceDictionary;
 
     /// <summary>
-    /// Accepts a collection of dice values
+    /// Represents a Full House hand in a dice-based poker game, where one value appears exactly three times
+    /// and another value appears exactly two times
     /// </summary>
-    public FullHouse(int[] diceValues)
+    public FullHouse(DiceDictionary diceDictionary)
     {
-        _diceValues = diceValues;
+        _diceDictionary = diceDictionary;
     }
 
     /// <summary>
@@ -30,37 +31,21 @@ public record FullHouse
     /// </returns>
     public bool IsValid()
     {
-        var diceDictionary = new Dictionary<int, int>();
-
-        foreach (var diceValue in _diceValues)
-        {
-            if (diceDictionary.ContainsKey(diceValue))
-            {
-                var diceNumber = diceDictionary[diceValue];
-                diceNumber++;
-                diceDictionary[diceValue] = diceNumber;
-            }
-            else
-            {
-                diceDictionary.Add(diceValue, 1);
-            }
-        }
+        var haveTwoCards = false;
+        var haveThreeCards = false;
         
-        var two = false;
-        var three = false;
-        
-        foreach (var dice in diceDictionary)
+        foreach (var dice in _diceDictionary.Content())
         {
             if (dice.Value == 2)
             {
-                two = true;
+                haveTwoCards = true;
             }
             if (dice.Value == 3)
             {
-                three = true;
+                haveThreeCards = true;
             }
         }
         
-        return two && three;
+        return haveTwoCards && haveThreeCards;
     }
 }

@@ -18,7 +18,7 @@ public class PockerHand
         if (new FiveKind(diceDictionary).IsValid()) return HandType.FiveKind;
         if (new FourKind(diceDictionary).IsValid()) return HandType.FourKind;
 
-        if (new FullHouse(_diceValues).IsValid()) return HandType.FullHouse;
+        if (new FullHouse(diceDictionary).IsValid()) return HandType.FullHouse;
         
         if (new Straight(_diceValues).IsValid()) return HandType.Straight;
         
