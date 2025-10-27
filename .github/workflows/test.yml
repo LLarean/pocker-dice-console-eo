@@ -25,10 +25,17 @@ jobs:
       run: dotnet build --no-restore --configuration Release
     
     - name: Test with coverage
-      run: dotnet test --no-build --configuration Release --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput=./coverage/lcov.info
+      run: dotnet test ./Tests/Tests.csproj --no-build --configuration Release --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput=./
     
     - name: Upload coverage to Coveralls
       uses: coverallsapp/github-action@v2
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         path-to-lcov: ./Tests/coverage.info
+        
+    - name: Check coverage file
+      run: |
+        echo "Coverage file content:"
+        cat ./Tests/coverage.info
+        echo "File size:"
+        ls -lh ./Tests/coverage.info
