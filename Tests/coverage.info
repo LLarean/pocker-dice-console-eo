@@ -1,0 +1,561 @@
+SF:D:\Repositories\pocker-dice-console-eo\dice-pocker-console-eo\Program.cs
+FN:2,System.Void Program::<Main>$(System.String[])
+FNDA:0,System.Void Program::<Main>$(System.String[])
+DA:3,0
+DA:4,0
+DA:6,0
+DA:7,0
+DA:8,0
+DA:10,0
+DA:12,0
+LF:7
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:D:\Repositories\pocker-dice-console-eo\dice-pocker-console-eo\Deck.cs
+FN:5,PockerDice.Dice[] PockerDice.Deck::Dices()
+FNDA:3,PockerDice.Dice[] PockerDice.Deck::Dices()
+DA:6,3
+DA:7,3
+DA:8,3
+DA:9,3
+DA:10,3
+DA:11,3
+DA:12,3
+DA:13,3
+DA:14,3
+DA:16,3
+DA:17,3
+FN:2,System.Void PockerDice.Deck::.ctor(System.Random,System.Int32)
+FNDA:3,System.Void PockerDice.Deck::.ctor(System.Random,System.Int32)
+DA:3,3
+LF:12
+LH:12
+BRF:0
+BRH:0
+FNF:2
+FNH:2
+end_of_record
+SF:D:\Repositories\pocker-dice-console-eo\dice-pocker-console-eo\Dice.cs
+FN:2,System.Random PockerDice.Dice::get_Random()
+FNDA:6107,System.Random PockerDice.Dice::get_Random()
+DA:3,6107
+FN:13,PockerDice.Dice PockerDice.Dice::Roll()
+FNDA:1211,PockerDice.Dice PockerDice.Dice::Roll()
+DA:14,1211
+DA:15,1211
+DA:16,1211
+DA:17,1211
+FN:19,System.Int32 PockerDice.Dice::Value()
+FNDA:1235,System.Int32 PockerDice.Dice::Value()
+DA:20,1235
+DA:21,1235
+DA:22,1235
+FN:5,System.Void PockerDice.Dice::.ctor(System.Random,System.Int32)
+FNDA:1263,System.Void PockerDice.Dice::.ctor(System.Random,System.Int32)
+DA:6,1263
+FN:7,System.Void PockerDice.Dice::.ctor(System.Random,System.Int32,System.Int32)
+FNDA:1211,System.Void PockerDice.Dice::.ctor(System.Random,System.Int32,System.Int32)
+DA:8,1211
+DA:9,1211
+DA:10,1211
+DA:11,1211
+LF:13
+LH:13
+BRF:0
+BRH:0
+FNF:5
+FNH:5
+end_of_record
+SF:D:\Repositories\pocker-dice-console-eo\dice-pocker-console-eo\GameTable.cs
+FN:12,System.Void PockerDice.GameTable::Start()
+FNDA:0,System.Void PockerDice.GameTable::Start()
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:19,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:26,0
+DA:28,0
+DA:30,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:37,0
+DA:39,0
+DA:41,0
+DA:43,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:50,0
+DA:51,0
+DA:53,0
+DA:54,0
+DA:55,0
+BRDA:21,36,0,0
+BRDA:21,36,1,0
+BRDA:32,128,1,0
+BRDA:32,128,0,0
+BRDA:45,222,1,0
+BRDA:45,222,0,0
+FN:6,System.Void PockerDice.GameTable::.ctor(PockerDice.Player[])
+FNDA:0,System.Void PockerDice.GameTable::.ctor(PockerDice.Player[])
+DA:7,0
+DA:8,0
+DA:9,0
+DA:10,0
+LF:33
+LH:0
+BRF:6
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:D:\Repositories\pocker-dice-console-eo\dice-pocker-console-eo\Hands\DiceDictionary.cs
+FN:12,System.Collections.Generic.Dictionary`2<System.Int32,System.Int32> PockerDice.DiceDictionary::Content()
+FNDA:49,System.Collections.Generic.Dictionary`2<System.Int32,System.Int32> PockerDice.DiceDictionary::Content()
+DA:13,49
+DA:14,49
+DA:15,49
+DA:16,49
+DA:17,49
+DA:18,49
+DA:19,49
+DA:20,49
+DA:21,49
+DA:22,49
+DA:24,637
+DA:25,245
+DA:26,245
+DA:27,245
+DA:28,245
+DA:29,245
+DA:31,49
+DA:32,49
+BRDA:24,112,1,245
+BRDA:24,112,0,49
+FN:6,System.Void PockerDice.DiceDictionary::.ctor(System.Int32[])
+FNDA:49,System.Void PockerDice.DiceDictionary::.ctor(System.Int32[])
+DA:7,49
+DA:8,49
+DA:9,49
+DA:10,49
+LF:22
+LH:22
+BRF:2
+BRH:2
+FNF:2
+FNH:2
+end_of_record
+SF:D:\Repositories\pocker-dice-console-eo\dice-pocker-console-eo\Menu.cs
+FN:5,System.Void PockerDice.Menu::Options()
+FNDA:0,System.Void PockerDice.Menu::Options()
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+DA:10,0
+BRDA:7,7,0,0
+BRDA:7,7,1,0
+FN:12,PockerDice.MenuOption PockerDice.Menu::OptionsNumber()
+FNDA:0,PockerDice.MenuOption PockerDice.Menu::OptionsNumber()
+DA:13,0
+DA:15,0
+DA:16,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:38,0
+DA:39,0
+BRDA:18,21,0,0
+BRDA:18,21,1,0
+BRDA:23,51,1,0
+BRDA:23,51,2,0
+BRDA:23,51,3,0
+BRDA:23,51,4,0
+BRDA:23,51,0,0
+FN:41,System.Int32[] PockerDice.Menu::NumbersDiceToRoll()
+FNDA:0,System.Int32[] PockerDice.Menu::NumbersDiceToRoll()
+DA:42,0
+DA:43,0
+DA:44,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:51,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+FN:60,System.String PockerDice.Menu::UserInput()
+FNDA:0,System.String PockerDice.Menu::UserInput()
+DA:61,0
+DA:62,0
+DA:63,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:70,0
+DA:71,0
+BRDA:65,26,0,0
+BRDA:65,26,1,0
+FN:73,System.String[] PockerDice.Menu::SplitInput(System.String)
+FNDA:0,System.String[] PockerDice.Menu::SplitInput(System.String)
+DA:74,0
+DA:75,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:82,0
+DA:83,0
+BRDA:77,18,0,0
+BRDA:77,18,1,0
+FN:85,System.Int32[] PockerDice.Menu::ParseAndValidateNumbers(System.String[])
+FNDA:0,System.Int32[] PockerDice.Menu::ParseAndValidateNumbers(System.String[])
+DA:86,0
+DA:87,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:101,0
+DA:102,0
+DA:104,0
+DA:105,0
+BRDA:89,151,1,0
+BRDA:91,37,0,0
+BRDA:91,37,1,0
+BRDA:96,65,0,0
+BRDA:96,65,1,0
+BRDA:96,79,0,0
+BRDA:96,79,1,0
+BRDA:89,151,0,0
+FN:2,System.Void PockerDice.Menu::.ctor(System.Boolean)
+FNDA:0,System.Void PockerDice.Menu::.ctor(System.Boolean)
+DA:3,0
+LF:70
+LH:0
+BRF:21
+BRH:0
+FNF:7
+FNH:0
+end_of_record
+SF:D:\Repositories\pocker-dice-console-eo\dice-pocker-console-eo\Player.cs
+FN:12,PockerDice.Player PockerDice.Player::RollAll()
+FNDA:2,PockerDice.Player PockerDice.Player::RollAll()
+DA:13,2
+DA:14,2
+DA:15,2
+DA:16,2
+DA:17,2
+FN:19,PockerDice.Player PockerDice.Player::RollDices(System.Int32[])
+FNDA:2,PockerDice.Player PockerDice.Player::RollDices(System.Int32[])
+DA:20,2
+DA:21,2
+DA:22,2
+DA:23,2
+FN:25,System.Int32[] PockerDice.Player::DicesValue()
+FNDA:3,System.Int32[] PockerDice.Player::DicesValue()
+DA:26,3
+DA:27,3
+DA:29,39
+DA:30,15
+DA:31,15
+DA:32,15
+DA:34,3
+DA:35,3
+BRDA:29,46,1,15
+BRDA:29,46,0,3
+FN:37,System.Void PockerDice.Player::Roll(System.Int32[])
+FNDA:4,System.Void PockerDice.Player::Roll(System.Int32[])
+DA:38,4
+DA:39,32
+DA:40,10
+DA:41,10
+DA:42,10
+DA:43,4
+BRDA:39,43,1,10
+BRDA:39,43,0,4
+FN:6,System.Void PockerDice.Player::.ctor(PockerDice.Dice[])
+FNDA:11,System.Void PockerDice.Player::.ctor(PockerDice.Dice[])
+DA:7,11
+DA:8,11
+DA:9,11
+DA:10,11
+LF:27
+LH:27
+BRF:4
+BRH:4
+FNF:5
+FNH:5
+end_of_record
+SF:D:\Repositories\pocker-dice-console-eo\dice-pocker-console-eo\PockerHand.cs
+FN:14,PockerDice.Hands.HandType PockerDice.PockerHand::Type()
+FNDA:0,PockerDice.Hands.HandType PockerDice.PockerHand::Type()
+DA:15,0
+DA:16,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:25,0
+DA:26,0
+BRDA:18,26,0,0
+BRDA:18,26,1,0
+BRDA:19,45,0,0
+BRDA:19,45,1,0
+BRDA:20,66,0,0
+BRDA:20,66,1,0
+BRDA:21,87,0,0
+BRDA:21,87,1,0
+BRDA:22,108,0,0
+BRDA:22,108,1,0
+BRDA:23,129,0,0
+BRDA:23,129,1,0
+FN:8,System.Void PockerDice.PockerHand::.ctor(System.Int32[])
+FNDA:0,System.Void PockerDice.PockerHand::.ctor(System.Int32[])
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+LF:14
+LH:0
+BRF:12
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:D:\Repositories\pocker-dice-console-eo\dice-pocker-console-eo\Hands\FiveKind.cs
+FN:28,System.Boolean PockerDice.Hands.FiveKind::IsValid()
+FNDA:6,System.Boolean PockerDice.Hands.FiveKind::IsValid()
+DA:29,6
+DA:30,71
+DA:31,28
+DA:32,28
+DA:33,3
+DA:34,3
+DA:36,25
+DA:38,3
+DA:39,6
+BRDA:30,57,1,28
+BRDA:32,42,0,3
+BRDA:32,42,1,25
+BRDA:30,57,0,3
+FN:16,System.Void PockerDice.Hands.FiveKind::.ctor(PockerDice.DiceDictionary)
+FNDA:6,System.Void PockerDice.Hands.FiveKind::.ctor(PockerDice.DiceDictionary)
+DA:17,6
+DA:18,6
+DA:19,6
+DA:20,6
+LF:13
+LH:13
+BRF:4
+BRH:4
+FNF:2
+FNH:2
+end_of_record
+SF:D:\Repositories\pocker-dice-console-eo\dice-pocker-console-eo\Hands\FourKind.cs
+FN:29,System.Boolean PockerDice.Hands.FourKind::IsValid()
+FNDA:6,System.Boolean PockerDice.Hands.FourKind::IsValid()
+DA:30,6
+DA:31,71
+DA:32,28
+DA:33,28
+DA:34,3
+DA:35,3
+DA:37,25
+DA:39,3
+DA:40,6
+BRDA:31,57,1,28
+BRDA:33,42,0,3
+BRDA:33,42,1,25
+BRDA:31,57,0,3
+FN:16,System.Void PockerDice.Hands.FourKind::.ctor(PockerDice.DiceDictionary)
+FNDA:6,System.Void PockerDice.Hands.FourKind::.ctor(PockerDice.DiceDictionary)
+DA:17,6
+DA:18,6
+DA:19,6
+DA:20,6
+LF:13
+LH:13
+BRF:4
+BRH:4
+FNF:2
+FNH:2
+end_of_record
+SF:D:\Repositories\pocker-dice-console-eo\dice-pocker-console-eo\Hands\FullHouse.cs
+FN:32,System.Boolean PockerDice.Hands.FullHouse::IsValid()
+FNDA:6,System.Boolean PockerDice.Hands.FullHouse::IsValid()
+DA:33,6
+DA:34,6
+DA:35,6
+DA:37,90
+DA:38,36
+DA:39,36
+DA:40,5
+DA:41,5
+DA:42,5
+DA:43,36
+DA:44,3
+DA:45,3
+DA:46,3
+DA:47,36
+DA:49,6
+DA:50,6
+BRDA:37,82,1,36
+BRDA:39,48,0,5
+BRDA:39,48,1,36
+BRDA:43,68,0,3
+BRDA:43,68,1,36
+BRDA:37,82,0,6
+FN:18,System.Void PockerDice.Hands.FullHouse::.ctor(PockerDice.DiceDictionary)
+FNDA:6,System.Void PockerDice.Hands.FullHouse::.ctor(PockerDice.DiceDictionary)
+DA:19,6
+DA:20,6
+DA:21,6
+DA:22,6
+LF:20
+LH:20
+BRF:6
+BRH:6
+FNF:2
+FNH:2
+end_of_record
+SF:D:\Repositories\pocker-dice-console-eo\dice-pocker-console-eo\Hands\OnePair.cs
+FN:29,System.Boolean PockerDice.Hands.OnePair::IsValid()
+FNDA:6,System.Boolean PockerDice.Hands.OnePair::IsValid()
+DA:30,6
+DA:31,75
+DA:32,30
+DA:33,30
+DA:34,3
+DA:35,3
+DA:37,27
+DA:39,3
+DA:40,6
+BRDA:31,57,1,30
+BRDA:33,42,0,3
+BRDA:33,42,1,27
+BRDA:31,57,0,3
+FN:16,System.Void PockerDice.Hands.OnePair::.ctor(PockerDice.DiceDictionary)
+FNDA:6,System.Void PockerDice.Hands.OnePair::.ctor(PockerDice.DiceDictionary)
+DA:17,6
+DA:18,6
+DA:19,6
+DA:20,6
+LF:13
+LH:13
+BRF:4
+BRH:4
+FNF:2
+FNH:2
+end_of_record
+SF:D:\Repositories\pocker-dice-console-eo\dice-pocker-console-eo\Hands\Straight.cs
+FN:31,System.Boolean PockerDice.Hands.Straight::IsValid()
+FNDA:5,System.Boolean PockerDice.Hands.Straight::IsValid()
+DA:32,5
+DA:33,5
+DA:35,6
+DA:36,5
+DA:37,3
+DA:38,3
+DA:40,4
+DA:42,2
+DA:43,5
+BRDA:35,25,0,1
+BRDA:35,25,1,4
+BRDA:36,43,0,1
+BRDA:36,43,1,3
+BRDA:37,63,0,0
+BRDA:37,63,1,3
+BRDA:38,83,0,0
+BRDA:38,83,1,3
+BRDA:40,96,0,2
+BRDA:40,96,1,1
+BRDA:40,115,0,1
+BRDA:40,115,1,2
+FN:18,System.Void PockerDice.Hands.Straight::.ctor(PockerDice.DiceDictionary)
+FNDA:5,System.Void PockerDice.Hands.Straight::.ctor(PockerDice.DiceDictionary)
+DA:19,5
+DA:20,5
+DA:21,5
+DA:22,5
+LF:13
+LH:13
+BRF:12
+BRH:10
+FNF:2
+FNH:2
+end_of_record
+SF:D:\Repositories\pocker-dice-console-eo\dice-pocker-console-eo\Hands\TwoPair.cs
+FN:29,System.Boolean PockerDice.Hands.TwoPair::IsValid()
+FNDA:6,System.Boolean PockerDice.Hands.TwoPair::IsValid()
+DA:30,6
+DA:31,6
+DA:32,6
+DA:34,90
+DA:35,36
+DA:36,36
+DA:37,5
+DA:38,5
+DA:39,5
+DA:40,31
+DA:41,3
+DA:42,3
+DA:43,3
+DA:44,36
+DA:46,6
+DA:47,6
+BRDA:34,91,1,36
+BRDA:36,42,0,8
+BRDA:36,42,1,28
+BRDA:36,55,0,5
+BRDA:36,55,1,31
+BRDA:40,77,0,3
+BRDA:40,77,1,36
+BRDA:34,91,0,6
+FN:17,System.Void PockerDice.Hands.TwoPair::.ctor(PockerDice.DiceDictionary)
+FNDA:6,System.Void PockerDice.Hands.TwoPair::.ctor(PockerDice.DiceDictionary)
+DA:18,6
+DA:19,6
+DA:20,6
+DA:21,6
+LF:20
+LH:20
+BRF:8
+BRH:8
+FNF:2
+FNH:2
+end_of_record
