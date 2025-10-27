@@ -1,7 +1,14 @@
 ﻿namespace PockerDice;
 
-public class GameTable(Player[] players)
+public record GameTable
 {
+    private readonly Player[] _players;
+
+    public GameTable(Player[] players)
+    {
+        _players = players;
+    }
+    
     public void Start()
     {
         while (true)
@@ -15,10 +22,10 @@ public class GameTable(Player[] players)
             {
                 return;
             }
-            
-            players[0] = players[0].RollAll();
 
-            var dicesValue = players[0].DicesValue();
+            _players[0] = _players[0].RollAll();
+
+            var dicesValue = _players[0].DicesValue();
 
             Console.WriteLine("The values of your dice:");
 
@@ -29,9 +36,9 @@ public class GameTable(Player[] players)
 
             int[] indexes = menu.NumbersDiceToRoll();
 
-            players[0] = players[0].RollDices(indexes);
+            _players[0] = _players[0].RollDices(indexes);
 
-            dicesValue = players[0].DicesValue();
+            dicesValue = _players[0].DicesValue();
 
             Console.WriteLine("The values of your dice:");
 
