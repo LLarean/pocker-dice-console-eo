@@ -21,6 +21,7 @@ public class StraightTests
     [TestCase(new[]{1, 2, 1, 4, 6})]
     [TestCase(new[]{1, 3, 1, 3, 1})]
     [TestCase(new[]{2, 3, 4, 5, 2})]
+    [TestCase(new[]{2, 3, 1, 1, 2})]
     public void IsValid_HandNotMeetsCriteriaStraight_IsFalse(int[] diceValues)
     {
         var diceDictionary = new DiceDictionary(diceValues);
