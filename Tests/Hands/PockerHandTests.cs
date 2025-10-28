@@ -18,6 +18,6 @@ public class PockerHandTests
     {
         var pockerHand = new PockerHand(diceValues);
         
-        Assert.IsTrue(pockerHand.Type() == handType);
+        Assert.That(pockerHand.Type(), Is.EqualTo(handType));
     }
 }

@@ -4,7 +4,7 @@ public class Menu(bool isFirstStep)
 {
     public void Options()
     {
-        Console.Write(isFirstStep == false
+        Console.Write(isFirstStep
             ? "Select option (1-RollAll, 3-Skip, 0-Exit): "
             : "Select option (1-RollAll, 2-Skip, 3-Select, 0-Exit): ");
     }
